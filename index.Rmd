@@ -38,9 +38,9 @@ data<-rnorm(1000,mean = 12.5,sd=1.5)
 head(data)
 ```
 
---- .class #id 
+--- 
 
-# Observing the effect of changes in mean and standard deviation
+## Observing the effect of changes in mean and standard deviation
 
 - As we know changing mean will move all the data points without changing their variation
 - Changing Standard deviation, however, changes the dispersion of the data. 
@@ -67,12 +67,10 @@ yfit <- yfit*diff(h$mids[1:2])*length(g)
 lines(xfit, yfit, col="black", lwd=2)
 ```
 
---- .class #id
+--- 
 
-# Interactive change of mean and sd in Shiny
+## Interactive change of mean and sd in Shiny
 In my Shiny application I used the interactive sliders for mean and sd. 
 Users can change the mean and sd and observe how the histogram and related normal curve changes for 1000 random data points.
 
 ![width](Shiny.png)
-
-.class #id

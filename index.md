@@ -40,24 +40,22 @@ head(data)
 ```
 
 ```
-## [1] 16.23773 12.57983 13.18437 14.86558 13.43353 14.28196
+## [1] 12.28641 15.10686 11.92112 13.76889 13.69646 10.46346
 ```
 
---- .class #id 
+--- 
 
-# Observing the effect of changes in mean and standard deviation
+## Observing the effect of changes in mean and standard deviation
 
 - As we know changing mean will move all the data points without changing their variation
 - Changing Standard deviation, however, changes the dispersion of the data. 
 
 ![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2-1.png)
 
---- .class #id
+--- 
 
-# Interactive change of mean and sd in Shiny
+## Interactive change of mean and sd in Shiny
 In my Shiny application I used the interactive sliders for mean and sd. 
 Users can change the mean and sd and observe how the histogram and related normal curve changes for 1000 random data points.
 
 ![width](Shiny.png)
-
-.class #id
