@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mean and Standard Deviation in a Normal Distribution</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Mean and Standard Deviation in a Normal Distribution">
+  <meta name="author" content="Zaman Forootan, PhD">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Mean and Standard Deviation in a Normal Distribution</h1>
+    <h2>How changing Mean and Std changes the data!</h2>
+    <p>Zaman Forootan, PhD<br/>Analytics Professional</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Normal Distribution</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>According to Wikipedia:</p>
+
+<ul>
+<li>In probability theory, the normal distribution is a very common continuous probability distribution. </li>
+<li><p>it is important in statistics and is often used in the natural and social sciences to represent real-valued random variables whose distributions are not known.</p></li>
+<li><p>The normal distribution is useful because of the central limit theorem. In its most general form it states that averages of random variables independently drawn from independent distributions converge in distribution to the normal, that is, become normally distributed when the number of random variables is sufficiently large.</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>The mathematics of Normal Distributions</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The probability density of the normal distribution is:
+\[f(x \; | \; \mu, \sigma^2) = \frac{1}{\sigma\sqrt{2\pi} } \; e^{ -\frac{(x-\mu)^2}{2\sigma^2} }\]
+Where:
+\(\mu\) is mean or expectation of the distribution (and also its median and mode).</p>
+
+<p>\(\sigma\) is standard deviation.</p>
+
+<p>\(\sigma^2\) is variance.</p>
+
+<p>In R using <code>rnorm(n,mean,sd)</code>, one can produce n normally distributed points with \(\mu\)=mean and \(\sigma\)=sd. Here is an example of this code:</p>
+
+<pre><code class="r">data&lt;-rnorm(1000,mean = 12.5,sd=1.5)
+head(data)
+</code></pre>
+
+<pre><code>## [1] 16.23773 12.57983 13.18437 14.86558 13.43353 14.28196
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h1>Observing the effect of changes in mean and standard deviation</h1>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>As we know changing mean will move all the data points without changing their variation</li>
+<li>Changing Standard deviation, however, changes the dispersion of the data. </li>
+</ul>
+
+<p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h1>Interactive change of mean and sd in Shiny</h1>
+  </hgroup>
+  <article data-timings="">
+    <p>In my Shiny application I used the interactive sliders for mean and sd. 
+Users can change the mean and sd and observe how the histogram and related normal curve changes for 1000 random data points.</p>
+
+<p><img src="Shiny.png" alt="width"></p>
+
+<p class='class'>#id</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Normal Distribution'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='The mathematics of Normal Distributions'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Observing the effect of changes in mean and standard deviation'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Interactive change of mean and sd in Shiny'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
