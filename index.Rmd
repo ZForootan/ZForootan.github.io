@@ -11,7 +11,7 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
 
-## Normal Distribution
+# Normal Distribution
 
 According to Wikipedia:
 - In probability theory, the normal distribution is a very common continuous probability distribution. 
@@ -21,7 +21,7 @@ According to Wikipedia:
 
 --- .class #id 
 
-## The mathematics of Normal Distributions
+# The mathematics of Normal Distributions
 
 The probability density of the normal distribution is:
 $$f(x \; | \; \mu, \sigma^2) = \frac{1}{\sigma\sqrt{2\pi} } \; e^{ -\frac{(x-\mu)^2}{2\sigma^2} }$$
@@ -40,7 +40,7 @@ head(data)
 
 --- 
 
-## Observing the effect of changes in mean and standard deviation
+# Observing the effect of changes in mean and standard deviation
 
 - As we know changing mean will move all the data points without changing their variation
 - Changing Standard deviation, however, changes the dispersion of the data. 
@@ -69,7 +69,7 @@ lines(xfit, yfit, col="black", lwd=2)
 
 --- 
 
-## Interactive change of mean and sd in Shiny
+# Interactive change of mean and sd in Shiny
 In my Shiny application I used the interactive sliders for mean and sd. 
 Users can change the mean and sd and observe how the histogram and related normal curve changes for 1000 random data points.
 
